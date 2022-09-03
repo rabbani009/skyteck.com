@@ -145,15 +145,15 @@ Route::prefix('slider')->group(function(){
     
     Route::post('/store', [SliderController::class, 'SliderStore'])->name('slider.store');
     
-    // Route::get('/edit/{id}', [SliderController::class, 'SliderEdit'])->name('slider.edit');
+    Route::get('/edit/{id}', [SliderController::class, 'SliderEdit'])->name('slider.edit');
     
-    // Route::post('/update', [SliderController::class, 'SliderUpdate'])->name('slider.update');
+    Route::post('/update', [SliderController::class, 'SliderUpdate'])->name('slider.update');
     
-    // Route::get('/delete/{id}', [SliderController::class, 'SliderDelete'])->name('slider.delete');
+    Route::get('/delete/{id}', [SliderController::class, 'SliderDelete'])->name('slider.delete');
     
-    // Route::get('/inactive/{id}', [SliderController::class, 'SliderInactive'])->name('slider.inactive');
+    Route::get('/inactive/{id}', [SliderController::class, 'SliderInactive'])->name('slider.inactive');
     
-    // Route::get('/active/{id}', [SliderController::class, 'SliderActive'])->name('slider.active');
+    Route::get('/active/{id}', [SliderController::class, 'SliderActive'])->name('slider.active');
     
     });
 
