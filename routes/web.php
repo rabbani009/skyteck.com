@@ -42,7 +42,7 @@ Route::get('/admin/logout',[AdminController::class, 'destroy'])->name('admin.log
 
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
     return view('admin.index');
-})->name('dashboard');
+})->name('dashboard')->middleware('auth:admin');
 
 
 //Brands all Routes  
