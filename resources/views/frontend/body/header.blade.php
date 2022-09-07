@@ -197,7 +197,9 @@ $subcategories = App\Models\SubCategory::where('category_id',$category->id)->ord
                             <h2 class="title">
                                 
 @if(session()->get('language') == 'bangla') {{ $subcategory->subcategory_name_ban }} @else {{ $subcategory->subcategory_name_en }} @endif
-                            </h2></a>
+                            </h2>
+                        
+                        </a>
 
 
 <!--   // Get SubSubCategory Table Data -->
