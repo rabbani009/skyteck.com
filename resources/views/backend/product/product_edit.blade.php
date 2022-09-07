@@ -228,7 +228,7 @@
                 </div>
                 <div class="form-group col-md-6">
                         <label for="inputState">Product Discount Price</label>
-                        <input type="text" name="discount_price" class="form-control" placeholder="Discount Price" required="" value="{{ $products->discount_price }}" >
+                        <input type="text" name="discount_price" class="form-control" placeholder="Discount Price"  value="{{ $products->discount_price }}" >
 
                         
                     @error('discount_price') 
