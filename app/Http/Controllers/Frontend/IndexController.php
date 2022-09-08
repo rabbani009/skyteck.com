@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Slider;
 use App\Models\Product;
+use App\Models\MultiImg; 
 
 class IndexController extends Controller
 {
@@ -68,6 +69,28 @@ class IndexController extends Controller
 
 
 
+	public function ProductDetails($id,$slug){
+		$product = Product::findOrFail($id);
+
+		$color_en = $product->product_color_en;
+		$product_color_en = explode(',', $color_en);
+
+		$color_ban = $product->product_color_hin;
+		$product_color_ban = explode(',', $color_ban);
+
+		$size_en = $product->product_size_en;
+		$product_size_en = explode(',', $size_en);
+
+		$size_ban = $product->product_size_ban;
+		$product_size_ban = explode(',', $size_ban);
+
+		$multiImag = MultiImg::where('product_id',$id)->get();
+
+		$cat_id = $product->category_id;
+		$relatedProduct = Product::where('category_id',$cat_id)->where('id','!=',$id)->orderBy('id','DESC')->get();
+	 	return view('frontend.product.product_details',compact('product','multiImag','product_color_en','product_color_ban','product_size_en','product_size_ban','relatedProduct'));
+
+	}
 
 
 

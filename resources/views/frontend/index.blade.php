@@ -1,6 +1,12 @@
 @extends('frontend.home_master')
 
 @section('content')
+
+@section('title')
+ Online Store 
+@endsection
+
+
 <div class="body-content outer-top-xs" id="top-banner-and-menu">
 
     <div class="container">

@@ -171,6 +171,11 @@ Route::get('/language/bangla', [LanguageController::class, 'Bangla'])->name('ban
 Route::get('/language/english', [LanguageController::class, 'English'])->name('english.language');
 
 
+// Frontend Product Details Page url 
+
+Route::get('/product/details/{id}/{slug}', [IndexController::class, 'ProductDetails']);
+
+
 
 
 
