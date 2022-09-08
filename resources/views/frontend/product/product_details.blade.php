@@ -949,8 +949,8 @@
         </div><!-- /.col -->
         <div class="clearfix"></div>
     </div><!-- /.row -->
+</div>
 
 
-
-
+    @include('frontend.body.brand')
 @endsection
