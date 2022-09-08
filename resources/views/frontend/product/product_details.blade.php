@@ -907,8 +907,8 @@
 
         <div class="product-price">	
             <span class="price">
-                $650.99				</span>
-                                            <span class="price-before-discount">$ 800</span>
+                $650.99</span>
+            <span class="price-before-discount">$ 800</span>
                                 
         </div><!-- /.product-price -->
         
@@ -953,4 +953,6 @@
 
 
     @include('frontend.body.brand')
+
+
 @endsection
